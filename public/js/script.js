@@ -11,8 +11,6 @@ const $view_clock = {
 };
 
 
-
-
 //-------------------click handlers------------------------------
 //click handler for /app timer :  
 (function(form, $clock, button){

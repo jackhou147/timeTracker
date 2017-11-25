@@ -169,6 +169,7 @@ router.get('/app', function(req,res,next){
 
 // POST /app
 //{time_passed and subject}
+//Nov 24 update: this route works, try not to change unless u have to
 router.post('/app', function(req, res, next) {
     
     //----------------variables----------------

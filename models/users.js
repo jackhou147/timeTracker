@@ -1,8 +1,4 @@
 //users schema
-//Note: information we need from the user at the time of registration: 
-//1. username; 2. email; 3. password; 4. subjects 5. profileStatus(either public or private)
-//Note: ask the user for email(not necessarily username because username is
-//harder to remember than email) when logging in
 
 var mongoose = require("mongoose")
 var bcrypt = require("bcrypt");
@@ -24,8 +20,6 @@ var UserSchema = new mongoose.Schema({
   },
   subjects: {
     type: Array,  
-    /*subjects array looks like this: 
-    [{subjectName: blablabla, timeGoal: blablabla},etc]*/
     required: false
   },
   profileStatus: {
