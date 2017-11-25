@@ -255,3 +255,7 @@ function render_clock(data,view){
     view.$minute.html($minute);
     view.$hour.html($hour);
 }
+
+$(document).ready(function(){
+    $(".dropdown-button").dropdown({hover: false});
+})

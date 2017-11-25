@@ -4,28 +4,32 @@ var mongoose = require("mongoose")
 var bcrypt = require("bcrypt");
 var UserSchema = new mongoose.Schema({
     email: {
-    type: String,
-    required: true,
-    trim: true,
-    unique: true,
-  },
-  userName: { //Note: we should ask for userName, not actual name
-    type: String,
-    required: true,
-    trim: true,
-  },
-  password: {
-    type: String,
-    required: true
-  },
-  subjects: {
-    type: Array,  
-    required: false
-  },
-  profileStatus: {
-    type: String,   //either "public" or "private"
-    required: false
-  }
+      type: String,
+      required: true,
+      trim: true,
+      unique: true,
+    },
+    userName: { //Note: we should ask for userName, not actual name
+      type: String,
+      required: true,
+      trim: true,
+    },
+    password: {
+      type: String,
+      required: true
+    },
+    subjects: {
+      type: Array,  
+      required: false
+    },
+    profileStatus: {
+      type: String,   //either "public" or "private"
+      required: false
+    },
+    profileImage: {   //a link to profile image
+      type: String,
+      required: false
+    }
 })
 
 //authenticate email and password against database documents

@@ -24,7 +24,8 @@ router.get("/", function(req,res,next){
                 return res.render("profile", {
                     title: "profile", 
                     userName: user.userName,
-                    profileStatus: user.profileStatus
+                    profileStatus: user.profileStatus,
+                    profileImage: user.profileImage
                 });
             }
         })

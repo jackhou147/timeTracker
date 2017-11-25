@@ -38,7 +38,8 @@ router.post('/', (req,res,next) => {
                 {subjectName: "physics", timeGoal: 90},
                 {subjectName: "biology", timeGoal: 80}
             ],
-            profileStatus: "public" //default value. user can change this later
+            profileStatus: "public", //default value. user can change this later
+            profileImage: "http://materializecss.com/images/motion.png"
         }
         console.dir(userData);
         //use Schema's 'create' method to insert document into Mongo

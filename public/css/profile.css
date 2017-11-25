@@ -26,14 +26,14 @@ body {
       position: fixed;
       width: 20%; }
       body .Profile .SideNav .SideNav__heading--img {
-        background: 50% no-repeat;
-        background-image: url("http://materializecss.com/images/motion.png");
         position: relative;
-        background-size: cover;
         width: 9rem;
         height: 9rem;
         border-radius: 50%;
         margin: 0 auto 4rem; }
+        body .Profile .SideNav .SideNav__heading--img img {
+          width: 100%;
+          border-radius: 50%; }
     body .Profile .main {
       margin-left: 30%;
       border: 1px dashed red; }
