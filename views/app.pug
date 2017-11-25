@@ -1,0 +1,28 @@
+extends layout
+block content
+  #index-banner.section.no-pad-bot.app__timer-n-table.App
+    div.form-container
+        form.timerForm
+            div.timerForm__timer-container.timer-container 
+                p.timer-container__timer.timer
+                    span.timer__hours.hrs   00
+                    span.timer__colon   :
+                    span.timer__minutes.mins 00
+                    span.timer__colon   :
+                    span.timer__seconds.secs 00
+            div.timerForm__button-container.button-container
+                button(type="button").timerForm__toggle-timer start timer
+        br
+        br
+        
+    div.subjects-table
+        <ul class="pagination subjects-table__pagination">
+            <li class="waves-effect subjects-table__btn btn-left"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+            each val, index in subjectNames
+                li(class=`${index == 0 ? "active" : "waves-effect"}`)
+                    a(href="#!")= val
+            <li class="waves-effect subjects-table__btn btn-right"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+        </ul>
+        
+        
+        

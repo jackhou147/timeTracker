@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    div.Profile
+        div.section.SideNav
+                    div.SideNav__heading--img
+                    ul.SideNav__list
+                        li.SideNav__list__item
+                            div.SideNav__list__link.SideNav__list__link--active
+                                span My profile
+        div.section.main
+            div.userProfile
+                div.row
+                    div.col.s8.section.UserProfile__Profile
+                        div.UserProfile__Profile__header.row
+                            div.col.s9
+                                h3  #{userName}
+                                div.UserProfile__Profile__header__profileStatus
+                                    span #{profileStatus}
+                            div.col.s3
+                                div 
+                                    span Edit
+                        div.UserProfile__Profile__bio
+                    div.col.s4.section
+    
+
+
+

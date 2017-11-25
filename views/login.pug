@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  div.Login
+    h1.Login__title <span>The most awesome study app. Ever.</span>
+    form.Login__form(method="POST" action="/login")
+        div.Login__form__row
+            input(type="text" id="email" placeholder="email" name="email" class="Login__form__row__input ")
+        div.Login__form__row
+            input(type="password" id="password" placeholder="password" name="password" class="Login__form__row__input ")
+        div.Login__form__row
+            button.Login__form__row__button(type="submit") Log in
+        div.Login__form__forgot
+            a(href="/account/help")
+                span Forgot password?
+        div.Login__form__register
+            span
+                span    Don't have an account?
+                a(href="/register")
+                    span Sign Up
+

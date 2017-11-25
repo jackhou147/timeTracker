@@ -1,0 +1,41 @@
+/***************for /profile route ******************/
+* {
+  color: black; }
+
+nav {
+  box-shadow: none; }
+
+.page-footer, .footer-copyright {
+  background-color: transparent;
+  text-align: center; }
+
+body {
+  background: white; }
+  body .profile__navbar {
+    position: fixed;
+    background-color: white; }
+    body .profile__navbar a {
+      color: black; }
+  body .Profile {
+    padding: 2rem;
+    border: 1px dashed red;
+    height: 100vh;
+    padding-top: 15vh; }
+    body .Profile .SideNav {
+      border-right: 0.1rem solid rgba(0, 0, 0, 0.1);
+      position: fixed;
+      width: 20%; }
+      body .Profile .SideNav .SideNav__heading--img {
+        background: 50% no-repeat;
+        background-image: url("http://materializecss.com/images/motion.png");
+        position: relative;
+        background-size: cover;
+        width: 9rem;
+        height: 9rem;
+        border-radius: 50%;
+        margin: 0 auto 4rem; }
+    body .Profile .main {
+      margin-left: 30%;
+      border: 1px dashed red; }
+
+/*# sourceMappingURL=profile.css.map */

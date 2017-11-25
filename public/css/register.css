@@ -1,0 +1,54 @@
+/***************for /login route ******************/
+.register__footer,
+.register__navbar,
+.footer-copyright {
+  background-color: transparent; }
+
+.Register {
+  color: #fff; }
+  .Register .Register__title {
+    margin: 10rem auto 4rem;
+    width: 70rem;
+    text-align: center;
+    font-size: 4.8rem;
+    line-height: 6.8rem; }
+  .Register .Register__form {
+    width: 42.5rem;
+    margin: 0 auto;
+    padding: 0;
+    display: block; }
+    .Register .Register__form .Register__form__register,
+    .Register .Register__form .Register__form__row {
+      padding-bottom: .2rem;
+      text-align: center;
+      position: relative; }
+    .Register .Register__form .Register__form__subtitle {
+      text-align: center; }
+    .Register .Register__form .Register__form__row__input {
+      margin: 0;
+      box-shadow: none;
+      border: 0;
+      width: 12.6rem;
+      height: 3.4rem;
+      padding: 0 4.8rem 0 1.6rem;
+      overflow: hidden;
+      background-color: #faffbd;
+      background-image: none;
+      color: black; }
+    .Register .Register__form .Register__form__row__button {
+      vertical-align: middle;
+      background-color: #224099;
+      width: 18.6rem;
+      height: 3.4rem;
+      padding: 0;
+      border: 0;
+      border-radius: .2rem;
+      box-shadow: none;
+      display: inline-block;
+      text-decoration: none;
+      margin-top: .8rem; }
+  .Register a {
+    color: #fff;
+    text-decoration: underline; }
+
+/*# sourceMappingURL=register.css.map */

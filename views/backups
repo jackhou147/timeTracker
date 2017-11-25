@@ -1,0 +1,78 @@
+//profile page:
+form(method="POST" action="/profile")
+            div
+                label(for="subjectName") subjectName
+                input(type="text" id="subjectName" placeholder="subjectName" name="subjectName")
+            div
+                label(for="timeGoal") timeGoal
+                input(type="text" id="timeGoal" placeholder="timeGoal" name="timeGoal")
+            button(type="submit") submit and goto /profile
+            
+            
+//nav bar
+nav(role='navigation' class=`${title}__navbar ${title == 'login' ? "" :"light-blue.lighten-1"}`)
+            .nav-wrapper.container
+                a#logo-container.brand-logo(href='/') Study Timer
+                
+                
+                
+//app route
+
+                //variables...
+                const userName = user.userName;  //user's name
+                let subject_to_study;
+                //process...
+                //connect to database
+                MongoClient.connect(`mongodb://${process.env.IP}:27017/timetracker`, function(err, db) {
+                        // Create a collection we want to drop later
+                        var collection = db.collection('users');
+                        collection.find({name}).toArray()
+                            .then(function(result){
+                                //get the subjects array
+                                let subjects = result[0].subjects;
+                                console.log(subjects[0][0].subjectName)
+                                //set value to subject_to_study
+                                subject_to_study = subjects[0][0].subjectName;
+                                //render the page
+                                return res.render("app", {
+                                    subject_to_study, 
+                                    title: 'app'
+                                })
+                            })
+                })
+                
+                
+                
+                
+                return res.render("profile", {
+                    title: "profile", 
+                    userName: user.userName,
+                    profileStatus: user.profileStatus
+                });
+                
+                
+                
+//index.js POST /app        
+//variables...
+    const name = req.cookies.username;  //user's name
+    const time_passed = req.body.timePassed;  //time that has passed since the timer began
+    const subject = req.body.subjectName;   //subject that the user is studying
+    //connect to database, and update collection
+    MongoClient.connect(`mongodb://${process.env.IP}:27017/timetracker`, function(err, db) {
+            // Create a collection we want to drop later
+            var collection = db.collection('users');
+            const timeGoalOfSubject = collection.find({name}).toArray(); //time goal of that subject
+            const newTimeGoal = timeGoalOfSubject - time_passed;
+            console.log(timeGoalOfSubject);
+            //console.dir(collection);
+            collection.updateOne(
+                {name: name},
+                {$push: 
+                    {
+                        subjects: [{subjectName: subject, timeGoal: newTimeGoal}]
+                    }
+                }
+            )
+        })
+    
+    return res.send(`haha motherfucker you just sent some data: ${name}, ${subject} ${time_passed}`);

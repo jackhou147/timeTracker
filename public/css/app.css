@@ -1,0 +1,37 @@
+/***************for /app route ******************/
+.app__timer-n-table {
+  height: 90vh; }
+  .app__timer-n-table div.form-container {
+    padding: 5vw; }
+    .app__timer-n-table div.form-container form.timerForm {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between; }
+      .app__timer-n-table div.form-container form.timerForm div.timer-container {
+        margin-top: 5%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly; }
+        .app__timer-n-table div.form-container form.timerForm div.timer-container span {
+          font-size: 4em;
+          color: orange; }
+      .app__timer-n-table div.form-container form.timerForm div.button-container {
+        margin: 5%;
+        width: 10%;
+        display: flex;
+        justify-content: center; }
+        .app__timer-n-table div.form-container form.timerForm div.button-container button {
+          width: 50%;
+          height: 0;
+          padding-bottom: 50%;
+          border-radius: 50%; }
+  .app__timer-n-table div.subjects-table .pagination {
+    border: inherit;
+    max-width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto; }
+
+/*# sourceMappingURL=app.css.map */

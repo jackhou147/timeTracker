@@ -1,0 +1,24 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+.icon-block {
+  padding: 0 15px; }
+
+.icon-block .material-icons {
+  font-size: inherit; }
+
+* {
+  box-sizing: border-box; }
+
+.page-footer, .footer-copyright {
+  background-color: rgba(51, 51, 51, 0.08); }
+
+/***************universal color scheme ******************/
+body {
+  background: linear-gradient(180deg, #00a0ee, #386aff 50%); }
+
+/*# sourceMappingURL=style.css.map */

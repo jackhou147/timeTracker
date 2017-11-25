@@ -1,0 +1,69 @@
+
+/***************for /login route ******************/
+.login__footer,
+.login__navbar,
+.footer-copyright{
+    background-color: transparent;
+}
+
+.Login{
+    color: #fff;
+     
+    .Login__title{
+        margin: 10rem auto 4rem;
+        width: 70rem;
+        text-align: center;
+        font-size: 4.8rem;
+        line-height: 6.8rem;
+    }
+     
+     .Login__form {
+        width: 42.5rem;
+        margin: 0 auto;
+        padding: 0;
+        display: block;
+
+         
+        .Login__form__forgot, 
+        .Login__form__register, 
+        .Login__form__row, 
+        .Login__form__row__remember{
+            padding-bottom:.2rem;
+            text-align: center;
+            position: relative;
+        }
+     
+        .Login__form__row__input {
+            margin: 0;
+            box-shadow: none;
+            border: 0;
+            width: 12.6rem;
+            height: 3.4rem;
+            padding: 0 4.8rem 0 1.6rem;
+            overflow: hidden;
+            background-color: rgb(250, 255, 189);
+            background-image: none;
+            color: rgb(0, 0, 0);
+        }
+        
+        .Login__form__row__button {
+            vertical-align: middle;
+            background-color: #224099;
+            width: 18.6rem;
+            height: 3.4rem;
+            padding: 0;
+            border: 0;
+            border-radius: .2rem;
+            box-shadow: none;
+            display: inline-block;
+            text-decoration: none;
+            margin-top: .8rem;
+        }
+    }
+     
+     a {
+         color: #fff;
+         text-decoration: underline;
+     }
+     
+}

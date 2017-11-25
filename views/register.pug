@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  div.Register
+    h1.Register__title <span>The most awesome study app. Ever.</span>
+    form.Register__form(method='POST' action='/register')
+        h5.Register__form__subtitle
+            span Sign up for free
+        //------email----------
+        div.Register__form__row
+            input(type="text" id="email" placeholder="email" name="email" class="Register__form__row__input ")
+        //------userName----------
+        div.Register__form__row
+            input(type="text" id="userName" placeholder="user name" name="userName" class="Register__form__row__input ")
+        //------password----------
+        div.Register__form__row
+            input(type="password" id="password" placeholder="password" name="password" class="Register__form__row__input ")
+        //------confirm password----------
+        div.Register__form__row
+            input(type="password" id="confirmPassword" placeholder="confirm password" name="confirmPassword" class="Register__form__row__input ")
+        //------sign up button----------
+        div.Register__form__row
+            button.Register__form__row__button(type="submit") Sign Up
+        div.Register__form__login
+            span
+                span    Already have an account?
+                a(href="/login")
+                    span Log in
+

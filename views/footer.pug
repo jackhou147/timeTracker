@@ -1,0 +1,39 @@
+footer.page-footer(class=`${title}__footer ${title == "about" ? "orange" : ""}`)
+            if(title == 'About')
+                .container
+                    .row
+                        .col.l6.s12
+                            h5.white-text The timer
+                            p.grey-text.text-lighten-4
+                                | The study time tracker allows you maximize your time of study flow. This tracker helps you to organize the time subject by subject. With the feature of countdown clock, this enables you to track your time while you are studying, so you will never forget to study other subjects. Also, you are allowed to save your schedule with your signed in account. You will never have to worry about losing your schedule.
+                        .col.l3.s12
+                            h5.white-text Settings
+                            ul
+                                li
+                                    a.white-text(href='#!') Link 1
+                                li
+                                    a.white-text(href='#!') Link 2
+                                li
+                                    a.white-text(href='#!') Link 3
+                                li
+                                    a.white-text(href='#!') Link 4
+                        .col.l3.s12
+                            h5.white-text Connect
+                            ul
+                                li
+                                    a.white-text(href='#!') Link 1
+                                li
+                                    a.white-text(href='#!') Link 2
+                                li
+                                    a.white-text(href='#!') Link 3
+                                li
+                                    a.white-text(href='#!') Link 4
+            .footer-copyright
+                .container
+                    | Made by 
+                    a.orange-text.text-lighten-3 GroupName
+// Scripts
+script(src='https://code.jquery.com/jquery-2.1.1.min.js')
+script(src='/static/js/materialize.js')
+script(src='/static/js/init.js')
+script(src='/static/js/script.js')
