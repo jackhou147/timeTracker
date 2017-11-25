@@ -9,7 +9,7 @@ var UserSchema = new mongoose.Schema({
     trim: true,
     unique: true,
   },
-  userName: {
+  userName: { //Note: we should ask for userName, not actual name
     type: String,
     required: true,
     trim: true,

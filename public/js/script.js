@@ -2,6 +2,9 @@
 //'view' refers to html page
 //'$view_' refers to a DOM object or Jquery object, as opposed
 //to some data values. Ex: '$("div")'' vs '44'
+//Note: for the variable called time_diff: ex:user pauses timer at 00:00:06;
+//user resumes timer; 30 seconds later user pauses again; so the time_diff in
+//this case is gonna be 30, this 30 seconds is what we send to the server
 
 //---------------------CONSTANTS---------------------------------
 const $view_clock = {
@@ -24,8 +27,11 @@ const $view_clock = {
         minutes: Number($clock.$minute.html()),
         seconds: Number($clock.$second.html()) 
     };
+    var time_diff;  //difference between two timer pauses. 
     
     //----------------process----------------
+    //set cookie
+    Cookies.set("timePassed", 0);
     //attach event listeners
     button.click(toggleTimer); 
     form.submit(handleSubmit);
@@ -58,9 +64,12 @@ const $view_clock = {
             console.log("timer off")
             //1. terminate interval
             clearInterval(interval);
-            //2. submit form
+            //2. set cookie
+            time_diff = all_to_seconds(time_passed.hours,time_passed.minutes,time_passed.seconds) - Cookies.get("timePassed");
+            Cookies.set("timePassed", all_to_seconds(time_passed.hours,time_passed.minutes,time_passed.seconds))
+            //3. submit form
             form.submit();
-            //3. change button text
+            //4. change button text
             button.html("start timer");
         }
     }
@@ -71,16 +80,16 @@ const $view_clock = {
         Pre-condition: Jquery
         */
         
-        console.log("submit form!")
+        console.log("submit form!");
+        console.log(Cookies.get("timePassed"))
         //variables...
         let formData = {    //data to be submitted
             subjectName: $(".subjects-table .active a").html(),    
-            timePassed: all_to_seconds(
-                time_passed.hours,time_passed.minutes,time_passed.seconds
-            )
+            timePassed: time_diff
         };
         
         //process...
+        //submit post request to server
         $.ajax({
             type        : 'POST', 
             url         : '/app', //send POST request to /app
@@ -163,7 +172,6 @@ const $view_clock = {
         Purpose: set the clicked element to be active, remove
         the active class from the previous element
         */
-        
         //variables...
         let prev_el = $table.find("li.active"); //previous active element
         let new_el = $(this);  //new active element
