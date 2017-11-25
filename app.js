@@ -33,8 +33,18 @@ app.set('view engine', 'pug');
 app.set('views', __dirname + '/views');
 
 // include routes
-var routes = require('./routes/index');
-app.use('/', routes);
+const mainroutes = require('./routes/index.js'),
+      aboutRoutes = require("./routes/about.js"),
+      registerRoutes = require("./routes/register.js"),
+      profileRoutes = require("./routes/profile.js"),
+      loginRoutes = require("./routes/login.js"),
+      appRoutes = require("./routes/app.js");
+app.use(mainroutes);
+app.use("/about", aboutRoutes);
+app.use("/register", registerRoutes);
+app.use("/profile",profileRoutes);
+app.use("/login",loginRoutes);
+app.use("/app",appRoutes);
 
 
 
